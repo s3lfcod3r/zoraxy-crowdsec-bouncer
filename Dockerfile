@@ -2,7 +2,7 @@
 ARG ZORAXY_VERSION=v3.3.4-rc1
 FROM zoraxydocker/zoraxy:${ZORAXY_VERSION}
 
-ARG PLUGIN_VERSION=v1.2.0
+ARG PLUGIN_VERSION=v1.2.1
 
 # Git installieren
 RUN apk add --no-cache git
