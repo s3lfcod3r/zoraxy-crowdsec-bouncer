@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Zoraxy-CrowdSec-Bouncer</Name>
-  <Repository>ghcr.io/kabelsalatundklartext/zoraxy-crowdsec-bouncer:latest</Repository>
+  <Repository>ghcr.io/s3lfcod3r/zoraxy-crowdsec-bouncer:latest</Repository>
   <Registry>https://ghcr.io</Registry>
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
   <Privileged>false</Privileged>
-  <Support>https://github.com/kabelsalatundklartext/zoraxy-crowdsec-bouncer/issues</Support>
-  <Project>https://github.com/kabelsalatundklartext/zoraxy-crowdsec-bouncer</Project>
+  <Support>https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/issues</Support>
+  <Project>https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer</Project>
   <Requires>CrowdSec LAPI (separate container) — CrowdSec-LAPI (separater Container)</Requires>
   <Overview>
     EN — English&#xD;&#xA;
@@ -23,8 +23,8 @@
   </Overview>
   <Category>Network:Proxy</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/kabelsalatundklartext/zoraxy-crowdsec-bouncer/main/zoraxy-crowdsec-bouncer.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/kabelsalatundklartext/zoraxy-crowdsec-bouncer/main/Zoraxy-Crowdsec.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/s3lfcod3r/zoraxy-crowdsec-bouncer/main/unraid/zoraxy-crowdsec-bouncer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/s3lfcod3r/zoraxy-crowdsec-bouncer/main/Zoraxy-Crowdsec.png</Icon>
   <ExtraParams>--restart unless-stopped</ExtraParams>
   <Description>EN: Zoraxy with CrowdSec bouncer plugin; config.yaml auto-created from variables. DE: Zoraxy mit CrowdSec-Bouncer-Plugin; config.yaml wird automatisch aus den Variablen erzeugt.</Description>
 

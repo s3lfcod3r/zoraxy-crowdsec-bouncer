@@ -9,7 +9,8 @@ on:
   workflow_dispatch: # manueller Start über GitHub UI möglich
 
 env:
-  IMAGE_NAME: ghcr.io/kabelsalatundklartext/zoraxy-crowdsec-bouncer
+  # Leitet sich aus dem Repo ab (owner/name) – bleibt bei einem Konto-Umzug korrekt
+  IMAGE_NAME: ghcr.io/${{ github.repository }}
 
 jobs:
   build-and-push:
