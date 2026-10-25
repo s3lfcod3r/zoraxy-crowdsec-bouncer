@@ -10,7 +10,7 @@
 
 [![Build](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/docker-build.yml)
 [![Auto-Update](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/auto-update.yml/badge.svg)](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/auto-update.yml)
-![License](https://img.shields.io/badge/License-MIT%20%2F%20AGPL--3.0-orange)
+![License](https://img.shields.io/badge/License-All%20rights%20reserved%20%2B%20third--party-orange)
 ![Platform](https://img.shields.io/badge/Unraid-Docker-1c1b1b?logo=docker&logoColor=white)
 
 **[🇩🇪 Deutsch](#-deutsch)** · **[🇬🇧 English](#-english)** · **[Credits](#credits--lizenzen--licenses)**
@@ -593,6 +593,30 @@ services:
       - FASTGEOIP=true
       - DOCKER=true
 ```
+
+---
+
+# ⚖️ Lizenz / License
+
+**🇩🇪 Alle Rechte vorbehalten.** © 2026 s3lfcod3r / SelfCoder
+
+Du darfst die Software **privat und nicht-kommerziell** installieren und benutzen (z. B. im Homelab, über Docker oder Unraid).
+
+**Ohne schriftliche Erlaubnis verboten:** kommerzielle Nutzung · Kopieren · Verändern · Weitergeben · Einbauen in eigene Projekte (auch Closed Source) · Verkaufen.
+
+Das gilt nur für die Dateien in diesem Repository (Dockerfile, Skripte, Templates, Doku). Zoraxy (AGPL-3.0), das CrowdSec-Bouncer-Plugin (MIT) und CrowdSec (MIT) behalten ihre eigenen Lizenzen — siehe *Credits* unten.
+
+Details: [LICENSE](LICENSE)
+
+**🇬🇧 All rights reserved.** © 2026 s3lfcod3r / SelfCoder
+
+You may install and use the software **privately and non-commercially** (e.g. in your home lab, via Docker or Unraid).
+
+**Not permitted without written permission:** commercial use · copying · modifying · redistributing · incorporating into other projects (including closed source) · selling.
+
+This covers only the files in this repository (Dockerfile, scripts, templates, docs). Zoraxy (AGPL-3.0), the CrowdSec bouncer plugin (MIT) and CrowdSec (MIT) keep their own licenses — see *Credits* below.
+
+Details: [LICENSE](LICENSE)
 
 ---
 
