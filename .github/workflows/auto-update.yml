@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: Repository auschecken
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Aktuelle Versionen aus Dockerfile lesen
         id: current
