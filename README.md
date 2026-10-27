@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Zoraxy-Crowdsec.png" alt="Zoraxy CrowdSec Bouncer logo" width="140" />
+<img src="assets/logo.png" alt="Zoraxy CrowdSec Bouncer logo" width="140" />
 
 **Zoraxy reverse proxy with the CrowdSec bouncer plugin pre-installed — ready for Unraid and Docker.**<br>
 *Zoraxy-Reverse-Proxy mit vorinstalliertem CrowdSec-Bouncer-Plugin — fertig für Unraid und Docker.*
@@ -8,6 +8,7 @@
 [![Build](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/docker-build.yml/badge.svg)](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/docker-build.yml)
 [![Auto-Update](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/auto-update.yml/badge.svg)](https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/actions/workflows/auto-update.yml)
 [![License](https://img.shields.io/badge/license-All%20rights%20reserved%20%2B%20third%20party-8A9CAA)](LICENSE)
+![Version](https://img.shields.io/badge/version-3.3.5-33A78C)
 ![Zoraxy](https://img.shields.io/badge/zoraxy-v3.3.5--rc4-1F7763)
 ![Plugin](https://img.shields.io/badge/plugin-v1.2.3-43D3AD)
 ![Deploy](https://img.shields.io/badge/deploy-GHCR%20%E2%86%92%20Unraid-6F95AD)
