@@ -4,7 +4,7 @@ ARG PLUGIN_VERSION=v1.2.3
 
 # Plugin in einer Hilfsstufe holen: das Zoraxy-Image entfernt apk aus seinem
 # finalen Image, dort lässt sich nichts mehr nachinstallieren.
-FROM alpine:3.20 AS plugin
+FROM alpine:3.24 AS plugin
 ARG PLUGIN_VERSION
 ARG TARGETARCH=amd64
 RUN apk add --no-cache git ca-certificates
