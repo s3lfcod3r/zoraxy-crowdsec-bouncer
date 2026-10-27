@@ -6,8 +6,8 @@ Neueste Version zuerst. Die Versionen folgen der eingebauten **Zoraxy**-Version;
 ---
 
 ## 3.3.5 · October 2026
-- 🇬🇧 Zoraxy **v3.3.5-rc1 → v3.3.5-rc4** (plugin stays **v1.2.3**); license switched to **all rights reserved** for the own files; README in Self standard.
-- 🇩🇪 Zoraxy **v3.3.5-rc1 → v3.3.5-rc4** (Plugin bleibt **v1.2.3**); Lizenz der eigenen Dateien auf **alle Rechte vorbehalten** umgestellt; README nach Self-Standard.
+- 🇬🇧 Zoraxy **v3.3.5-rc1 → v3.3.5-rc4** (plugin stays **v1.2.3**); license switched to **all rights reserved** for the own files; README in Self standard; plugin build stage **Alpine 3.20 → 3.24** (3.20 is end of life).
+- 🇩🇪 Zoraxy **v3.3.5-rc1 → v3.3.5-rc4** (Plugin bleibt **v1.2.3**); Lizenz der eigenen Dateien auf **alle Rechte vorbehalten** umgestellt; README nach Self-Standard; Bau-Stufe fürs Plugin **Alpine 3.20 → 3.24** (3.20 bekommt keine Updates mehr).
 
 ## 3.3.4 · August 2026
 - 🇬🇧 Zoraxy **v3.3.4-rc1 → v3.3.4**, plugin **v1.2.1 → v1.2.3**; image now pushed to the **own GHCR account**, auto-update commits under own identity.
