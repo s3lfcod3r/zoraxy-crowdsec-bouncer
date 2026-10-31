@@ -28,11 +28,20 @@ jobs:
 
       - name: Neueste Zoraxy-Version holen (tobychui/zoraxy)
         id: zoraxy_latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG=$(curl -sf https://api.github.com/repos/tobychui/zoraxy/releases/latest | jq -r '.tag_name')
-          if [ -z "$TAG" ] || [ "$TAG" = "null" ]; then
-            echo "::error::Zoraxy-Release konnte nicht abgerufen werden"
-            exit 1
+          # Angemeldet abfragen: ohne Token teilen sich alle Runner einer IP 60 Abfragen
+          # pro Stunde, dann scheitert der Lauf. Bei Fehlschlag nur Warnung, kein roter Lauf.
+          TAG=""
+          for i in 1 2 3; do
+            TAG=$(gh api repos/tobychui/zoraxy/releases/latest --jq '.tag_name' 2>/dev/null) && [ -n "$TAG" ] && [ "$TAG" != "null" ] && break
+            TAG=""
+            sleep 10
+          done
+          if [ -z "$TAG" ]; then
+            echo "::warning::Zoraxy-Release nicht abrufbar – Zoraxy-Update diesmal übersprungen"
+            exit 0
           fi
           echo "version=$TAG" >> $GITHUB_OUTPUT
           echo "Neueste Zoraxy: $TAG"
@@ -41,6 +50,10 @@ jobs:
         id: zoraxy_docker
         run: |
           TAG="${{ steps.zoraxy_latest.outputs.version }}"
+          if [ -z "$TAG" ]; then
+            echo "available=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
           HTTP=$(curl -sf -o /dev/null -w "%{http_code}" \
             "https://hub.docker.com/v2/repositories/zoraxydocker/zoraxy/tags/${TAG}")
           if [ "$HTTP" = "200" ]; then
@@ -53,11 +66,20 @@ jobs:
 
       - name: Neueste Plugin-Version holen (AnthonyMichaelTDM/zoraxy_crowdsec_bouncer)
         id: plugin_latest
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          TAG=$(curl -sf https://api.github.com/repos/AnthonyMichaelTDM/zoraxy_crowdsec_bouncer/releases/latest | jq -r '.tag_name')
-          if [ -z "$TAG" ] || [ "$TAG" = "null" ]; then
-            echo "::error::Plugin-Release konnte nicht abgerufen werden"
-            exit 1
+          # Angemeldet abfragen: ohne Token teilen sich alle Runner einer IP 60 Abfragen
+          # pro Stunde, dann scheitert der Lauf. Bei Fehlschlag nur Warnung, kein roter Lauf.
+          TAG=""
+          for i in 1 2 3; do
+            TAG=$(gh api repos/AnthonyMichaelTDM/zoraxy_crowdsec_bouncer/releases/latest --jq '.tag_name' 2>/dev/null) && [ -n "$TAG" ] && [ "$TAG" != "null" ] && break
+            TAG=""
+            sleep 10
+          done
+          if [ -z "$TAG" ]; then
+            echo "::warning::Plugin-Release nicht abrufbar – Plugin-Update diesmal übersprungen"
+            exit 0
           fi
           echo "version=$TAG" >> $GITHUB_OUTPUT
           echo "Neuestes Plugin: $TAG"
@@ -76,7 +98,8 @@ jobs:
             UPDATE=true
           fi
 
-          if [ "${{ steps.current.outputs.plugin }}" != "${{ steps.plugin_latest.outputs.version }}" ]; then
+          if [ -n "${{ steps.plugin_latest.outputs.version }}" ] && \
+             [ "${{ steps.current.outputs.plugin }}" != "${{ steps.plugin_latest.outputs.version }}" ]; then
             echo "Plugin: ${{ steps.current.outputs.plugin }} → ${{ steps.plugin_latest.outputs.version }}"
             NEW_PLUGIN="${{ steps.plugin_latest.outputs.version }}"
             UPDATE=true
