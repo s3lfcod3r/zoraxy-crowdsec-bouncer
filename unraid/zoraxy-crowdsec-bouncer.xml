@@ -9,6 +9,8 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer/issues</Support>
   <Project>https://github.com/s3lfcod3r/zoraxy-crowdsec-bouncer</Project>
+  <DonateText>EN: Like the project? Support it on Ko-fi ☕ — DE: Gefällt dir das Projekt? Unterstütze es auf Ko-fi ☕</DonateText>
+  <DonateLink>https://ko-fi.com/s3lfcod3r</DonateLink>
   <Requires>CrowdSec LAPI (separate container) — CrowdSec-LAPI (separater Container)</Requires>
   <Overview>
     EN — English&#xD;&#xA;
