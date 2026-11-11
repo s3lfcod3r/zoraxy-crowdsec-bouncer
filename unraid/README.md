@@ -1,21 +1,14 @@
 # Unraid
 
-Dieser Ordner enthält das **Container-Template** für Unraid.
-This folder contains the **Unraid container template**.
-
-| Datei / File | Zweck / Purpose |
-|---|---|
-| `zoraxy-crowdsec-bouncer.xml` | Container-Template (Ports, Pfade, Variablen) |
-
-> Das Maintainer-Profil `ca_profile.xml` liegt bewusst im **Repo-Root** — so erwartet es Unraid Community Applications.
-> The maintainer profile `ca_profile.xml` intentionally lives in the **repository root**, where Community Applications expects it.
+Das Unraid-Template liegt im Repo [s3lfcod3r/unraid-templates](https://github.com/s3lfcod3r/unraid-templates/blob/main/templates/zoraxy-crowdsec-bouncer.xml) und wird von dort in Community Applications gelistet.
+The Unraid template lives in [s3lfcod3r/unraid-templates](https://github.com/s3lfcod3r/unraid-templates/blob/main/templates/zoraxy-crowdsec-bouncer.xml) and is listed in Community Applications from there.
 
 ## Template manuell laden / Load the template manually
 
 Unraid → **Docker** → **Add Container** → ganz unten **Template URL**:
 
 ```
-https://raw.githubusercontent.com/s3lfcod3r/zoraxy-crowdsec-bouncer/main/unraid/zoraxy-crowdsec-bouncer.xml
+https://raw.githubusercontent.com/s3lfcod3r/unraid-templates/main/templates/zoraxy-crowdsec-bouncer.xml
 ```
 
 Dann **Load** klicken — alle Felder werden automatisch befüllt.

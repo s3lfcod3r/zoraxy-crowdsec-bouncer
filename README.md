@@ -121,7 +121,7 @@ Open `http://<host>:8000` → Zoraxy web UI, then [activate the plugin](#en-plug
 **Method 1 — Community Applications:** search for `zoraxy-crowdsec-bouncer`, click **Install**, adjust the settings below.
 
 **Method 2 — add the template manually:** *Docker → Add Container*, paste under **Template URL**
-`https://raw.githubusercontent.com/s3lfcod3r/zoraxy-crowdsec-bouncer/main/unraid/zoraxy-crowdsec-bouncer.xml`
+`https://raw.githubusercontent.com/s3lfcod3r/unraid-templates/main/templates/zoraxy-crowdsec-bouncer.xml`
 and click **Load**.
 
 <details><summary><b>Setup — Unraid settings in detail</b></summary>
@@ -352,8 +352,7 @@ Security update history → [CHANGELOG.md](CHANGELOG.md) (entries marked 🔒).
 | `Dockerfile` | Builds Zoraxy + bouncer plugin into one image |
 | `entrypoint.sh` | Writes the plugin `config.yaml` from the ENV variables on start |
 | `docker-compose.yml` | Local test without Unraid |
-| `unraid/zoraxy-crowdsec-bouncer.xml` | Unraid container template |
-| `ca_profile.xml` | Maintainer profile for Unraid Community Applications |
+| `unraid/README.md` | Unraid notes (template: [unraid-templates](https://github.com/s3lfcod3r/unraid-templates/blob/main/templates/zoraxy-crowdsec-bouncer.xml)) |
 | `.github/workflows/` | Image build (`docker-build.yml`) + version auto-update (`auto-update.yml`) |
 
 ```bash
@@ -472,7 +471,7 @@ services:
 **Methode 1 — Community Applications:** nach `zoraxy-crowdsec-bouncer` suchen, **Install** klicken, Einstellungen wie unten anpassen.
 
 **Methode 2 — Vorlage von Hand:** *Docker → Add Container*, unter **Template URL**
-`https://raw.githubusercontent.com/s3lfcod3r/zoraxy-crowdsec-bouncer/main/unraid/zoraxy-crowdsec-bouncer.xml`
+`https://raw.githubusercontent.com/s3lfcod3r/unraid-templates/main/templates/zoraxy-crowdsec-bouncer.xml`
 einfügen und **Load** klicken.
 
 <details><summary><b>Einrichtung — Unraid-Einstellungen im Detail</b></summary>
@@ -703,8 +702,7 @@ Verlauf der Sicherheitsupdates → [CHANGELOG.md](CHANGELOG.md) (Einträge mit �
 | `Dockerfile` | Baut Zoraxy + Bouncer-Plugin in ein Image |
 | `entrypoint.sh` | Schreibt beim Start die Plugin-`config.yaml` aus den ENV-Variablen |
 | `docker-compose.yml` | Lokaler Test ohne Unraid |
-| `unraid/zoraxy-crowdsec-bouncer.xml` | Unraid-Container-Vorlage |
-| `ca_profile.xml` | Maintainer-Profil für die Unraid Community Applications |
+| `unraid/README.md` | Unraid-Hinweise (Vorlage: [unraid-templates](https://github.com/s3lfcod3r/unraid-templates/blob/main/templates/zoraxy-crowdsec-bouncer.xml)) |
 | `.github/workflows/` | Image-Bau (`docker-build.yml`) + Versions-Auto-Update (`auto-update.yml`) |
 
 ```bash
