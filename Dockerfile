@@ -1,5 +1,5 @@
 # Versionen – werden automatisch durch auto-update.yml aktualisiert
-ARG ZORAXY_VERSION=v3.3.5-rc5
+ARG ZORAXY_VERSION=v3.3.5
 ARG PLUGIN_VERSION=v1.2.3
 
 # Plugin in einer Hilfsstufe holen: das Zoraxy-Image entfernt apk aus seinem
